@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Prediction Result</h1>
+    
+    <div class="result">
+        {% if result == 1 %}
+            <span style="color:red;">Fraud Detected 🚨</span>
+        {% else %}
+            <span style="color:green;">No Fraud ✅</span>
+        {% endif %}
+    </div>
+
+    <a href="/predict">
+        <button>Try Again</button>
+    </a>
+</div>
+</body>
+</html>
